@@ -20,8 +20,8 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %-----------------------------------------------------------------------------
 
-\documentclass[overlapped, 10pt]{res} % Section headers in flow (better for CV)
-% \documentclass[marginmode, 10pt]{res} % Section headers in left margin (maybe preferred in compact resume)
+% \documentclass[overlapped, 10pt]{res} % Section headers in flow (better for CV)
+\documentclass[marginmode, 10pt]{res} % Section headers in left margin (maybe preferred in compact resume)
 
 \usepackage{hyperref} % Enable urls
 
@@ -34,47 +34,13 @@
 
 \renewcommand{\labelitemi}{\textendash}
 
-% \setlength{\textwidth}{6.1in} % Text width of the document (tailored to marginmode)
-\setlength{\textwidth}{7.0in} % Text width of the document (tailored to marginmode)
+\setlength{\textwidth}{6.1in} % Text width of the document (tailored to marginmode)
+% \setlength{\textwidth}{7.0in} % Text width of the document (tailored to marginmode)
 % \setlength{\textwidth}{7.5in} % Text width of the document (default)
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|
-% TAGGING
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%|
-\usepackage[dvipsnames]{xcolor}
-\usepackage{amssymb}
-\usepackage{pxfonts}
-\usepackage{xstring}
+\newcommand{\me}{\textbf{KS}}       % My name in an author list.
+\def\Vhrulefill{\leavevmode\leaders\hrule height 0.7ex depth \dimexpr0.4pt-0.7ex\hfill\kern0pt}         % Horizontal fill-line, vertically centered on line.
 
-% DEFINE TAG CHARACTERS
-\newcommand{\physics}{$\blacktriangledown$}
-\newcommand{\biochem}{$\varheartsuit$}
-\newcommand{\shannon}{$\vardiamondsuit$}
-\newcommand{\classic}{$\clubsuit$}
-\newcommand{\quantum}{$\blacksquare$}
-% DEFINE TAG COLORS
-\newcommand{\physicscolor}{\color{YellowOrange}}
-\newcommand{\biochemcolor}{\color{Emerald}}
-\newcommand{\shannoncolor}{\color{Goldenrod}}
-\newcommand{\classiccolor}{\color{Cyan}}
-\newcommand{\quantumcolor}{\color{RedOrange}}
-
-% TAG COMMANDS
-\newcommand{\physicstag}{{\physicscolor\physics~}}
-\newcommand{\biochemtag}{{\biochemcolor\biochem~}}
-\newcommand{\shannontag}{{\shannoncolor\shannon~}}
-\newcommand{\classictag}{{\classiccolor\classic~}}
-\newcommand{\quantumtag}{{\quantumcolor\quantum~}}
-
-% ALIGNED TAG COMMAND
-\newcommand{\tag}[1]{
-    {\IfSubStr{#1}{\physics}{\physicscolor}{\color{White}}\physics}
-    {\IfSubStr{#1}{\biochem}{\biochemcolor}{\color{White}}\biochem}
-    {\IfSubStr{#1}{\shannon}{\shannoncolor}{\color{White}}\shannon}
-    {\IfSubStr{#1}{\classic}{\classiccolor}{\color{White}}\classic}
-    {\IfSubStr{#1}{\quantum}{\quantumcolor}{\color{White}}\quantum}
-}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
 
@@ -86,451 +52,374 @@
 
 \moveleft.5\hoffset\vbox{\hrule width\textwidth height 1pt}%\smallskip % Horizontal line after name; adjust line thickness by changing the '1pt'
 
-\moveleft.5\hoffset\centerline{ kmsherbert@yahoo.com \hfill (443) 975-3206 \hfill \href{kmsherbert.neocities.org}{kmsherbert.neocities.org} }
+% \moveleft.5\hoffset\centerline{ kyle.sherbert@vt.edu \hfill (443) 975-3206 \hfill \href{kmsherbert.neocities.org}{kmsherbert.neocities.org} }
 
 
 %-----------------------------------------------------------------------------
 
 \begin{resume}
 
-%-----------------------------------------------------------------------------
-%	OBJECTIVE SECTION
-%-----------------------------------------------------------------------------
+\section{\small{CONTACT\\INFORMATION}}
 
-\section{OBJECTIVE}
-
-A theoretical position studying the fundamental role of information in physics.
-
-%-----------------------------------------------------------------------------
-%	PERSONAL STATEMENT SECTION
-%-----------------------------------------------------------------------------
-
-\section{STATEMENT}
-
-Expert in multi-disciplinary sciences (\physicstag quantum physics, \biochemtag biochemistry, \shannontag information theory); algorithm development with \classictag classical and \quantumtag quantum computers; communicating arcane concepts through teaching and writing; and in walking to unwalkable places.
-
+\parbox[t]{0.45\textwidth}{
+    \textit{Email (Academic):} \hfill kyle.sherbert@vt.edu \\
+    \textit{Email (Personal):} \hfill kmsherbert@yahoo.com \\
+    \textit{Phone:} \hfill (443) 975-3206
+}
+\hfill
+\parbox[t]{0.45\textwidth}{
+    \textit{GitHub (Academic):} \hfill \href{https://github.com/kmsherbertvt}{kmsherbertvt} \\
+    \textit{GitHub (Personal):} \hfill \href{https://github.com/kmsherbert}{kmsherbert} \\
+    \textit{Website:} \hfill \href{https://kmsherbert.neocities.org}{kmsherbert.neocities.org}
+}
 
 %-----------------------------------------------------------------------------
 %	EDUCATION SECTION
 %-----------------------------------------------------------------------------
 
-\section{EDUCATION}
+\section{\small{EDUCATION}}
 
 Ph.D - \textbf{Physics} \\
-University of North Texas, Denton, TX \hfill May 2022
+\textit{University of North Texas} (Denton, TX) \hfill May 2022
 
 MS - \textbf{Physics} \\
-University of North Texas, Denton, TX \hfill  Dec 2020
+\textit{University of North Texas} (Denton, TX) \hfill  Dec 2020
 
 MS - \textbf{Computer Science} \\
-Towson University, Towson, MD \hfill May 2017
+\textit{Towson University} (Towson, MD) \hfill May 2017
 
 BS \textit{cum laude} - \textbf{Physics}; \textbf{Molecular Biology, Biochemistry and Bioinformatics} \\
-Towson University, Towson, MD \hfill Aug 2015
-
-%-----------------------------------------------------------------------------
-%	PRESENTATIONS SECTION
-%-----------------------------------------------------------------------------
-
-\section{PRESENTATIONS}
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{\physics\shannon\quantum}-] Adaptive quantum generative training using and unbounded loss function.
-    \hfill Talk, \textit{QCE24}. 2024
-\item[\tag{\physics\biochem\shannon\quantum}-] An adaptive pulse-level variational quantum eigensolver.
-    \hfill Talk, \textit{APS March Meeting}. 2024
-    \\ \null \hfill Poster, \textit{VTQ Symposium}. 2023
-\item[\tag{\physics\biochem\classic\quantum}-] Julianic simulations of a pulse-level VQE.
-    \hfill Talk, \textit{JuliaCon}. 2023
-\item[\tag{\shannon\quantum}-] Quantum compressive sensing.
-    \hfill Talk, \textit{VTQ Internal Seminar}. 2022
-    \\ \null \hfill Talk, \textit{SCaN Breakout Intern Seminar}. 2021
-    \\ \null \hfill Talk, \textit{NASA/NRO Intern Symposium}. 2021
-    \\ \null \hfill Talk, \textit{SCaN Intern Symposium}. 2021
-\item[\tag{\physics\quantum}-] Band theory on a quantum computer.
-    \hfill Invited Talk, \textit{ES22}. 2022
-\item[\tag{\physics\biochem\shannon\quantum}-] Band theory and beyond.
-    \hfill Poster, \textit{UNT MRS Poster Competition}. 2022
-    \\ \null \hfill Talk, Sandia National Labs. 2022
-    \\ \null \hfill Talk, Lawrence Berkeley National Labs. 2022
-    \\ \null \hfill Talk, Dartmouth College. 2022
-    \\ \null \hfill Talk, Virginia Tech. 2022
-    \\ \null \hfill Dissertation defense. 2022
-\item[\tag{\physics\quantum}-] Implementing Trans. Quantum Subspace Expansion with fewer qubits.
-    \hfill Talk, \textit{APS March Meeting}. 2022
-\item[\tag{\physics\biochem\quantum}-] Applying present-day quantum computers to materials science.
-    \hfill Dissertation proposal. 2021
-\item[\tag{\physics\quantum}-] Band structure in a quantum computer.
-    \hfill Talk, \textit{APS March Meeting}. 2021
-\item[\tag{\physics\quantum}-] A tutorial in variational quantum computing.
-    \hfill End-of-term presentation. 2019
-\item[\tag{\biochem}-] Seeking complexity in a nonlinear equilibrium chemical potential.
-    \hfill Student lecture. 2019
-\item[\tag{\physics}-] Predicting electron spin from scratch.
-    \hfill End-of-term presentation. 2019
-\item[\tag{\shannon\classic}-] Information reconciliation for erasure channels.
-    \hfill Thesis defense. 2017
-\item[\tag{\physics\shannon\classic}-] Information entropy of 1D quantum systems.
-    \hfill Poster, \textit{TU Research Expo}. 2015
-\item[\tag{}-] Surviving abroad without a smartphone.
-    \hfill Poster, \textit{TU Honors College Expo}. 2015
-\item[\tag{\biochem\classic}-] Exploring natural product formation with structural biology.
-    \hfill Talk, \textit{MB3 Club Seminar}, 2015
-    \\ \null \hfill Poster, \textit{CTRC Summer Research Colloquium}, 2014
-    \\ \null \hfill Talk, \textit{HWI Weekly Seminar}, 2014
-\item[\tag{\physics\classic}-] Computational simulation of electron diffraction.
-    \hfill Poster, \textit{TU Research Expo}. 2014
-    \\ \null \hfill Poster, \textit{APS March Meeting}. 2014
-\end{itemize}
-
-%-----------------------------------------------------------------------------
-%	PUBLICATIONS SECTION
-%-----------------------------------------------------------------------------
-
-\section{PUBLICATIONS}
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{\physics\biochem\shannon\quantum}-] On the scalability of pulse-level VQE with chemical complexity. \hfill (TBP)
-\item[\tag{\physics\biochem\shannon\quantum}-] Avoiding symmetry roadblocks in pulse-level VQE. \hfill (TBP)
-\item[\tag{\physics\biochem\shannon\quantum}-] An adaptive pulse-level variational quantum eigensolver. \hfill (TBP)
-\item[\tag{\physics\quantum}-] Surrogate constructed scalable ciruits ADAPT-VQE using the Schwinger model. \hfill \href{https://arxiv.org/abs/2408.12641}{arXiv:2408.12641.} 2024.
-\item[\tag{\physics\shannon\quantum}-] Adaptive quantum generative training using and unbounded loss function. \hfill \href{https://arxiv.org/abs/2408.00218}{arXiv:2408.00218.} 2024.
-\item[\tag{\physics\biochem\quantum}-] Parameterization and optimizability of pulse-level. VQE \hfill \href{https://arxiv.org/abs/2405.15166}{arXiv:2405.15166.} 2024.
-\item[\tag{\shannon\quantum}-] Quantum compressive sensing: mathematical machinery...
-    \hfill \href{https://arxiv.org/abs/2204.13035}{\textit{Appl. Sci.} (\textbf{12}: 15). 2022}
-\item[\tag{\physics\biochem\shannon\quantum}-] Band theory and beyond: ... quantum algorithms for quantum chemistry.
-    \hfill Poster and dissertation.* 2022
-\item[\tag{\physics\quantum}-] Locating excited states without modifying a cost-function.
-    \hfill \href{https://arxiv.org/abs/2204.04361}{arXiv:2204.04361.} 2022.
-\item[\tag{\physics\quantum}-] Quantum algorithm for ... band structures with local tight-binding orbitals.
-    \hfill \href{https://doi.org/10.21203/rs.3.rs-1318951/v1}{\textit{Scientific Reports (\textbf{12})}. 2022}
-\item[\tag{\physics\quantum}-] A systematic ... band theory in a quantum computer.
-    \hfill \href{https://arxiv.org/abs/2104.03409}{\textit{RSC Adv.} (\textbf{11}). 2021}
-\item[\tag{\physics\quantum}-] Quantum computation of silicon ... band structure.
-    \hfill \href{https://arxiv.org/abs/2006.03807}{\textit{Phys. Chem. Chem. Phys.} (\textbf{22}). 2020}
-\item[\tag{\biochem}-] Seeking complexity in a nonlinear equilibrium chemical potential.
-    \hfill Report.* 2019
-\item[\tag{}-] Music theory: methods for mathematical music.
-    \hfill Report.* 2018
-\item[\tag{\classic}-] Hello, World!—Code Responsibly.
-    \hfill \href{https://ieeexplore.ieee.org/document/8283486}{\textit{IEEE Security \& Privacy} (\textbf{16}: 1). 2018}
-\item[\tag{\shannon\classic}-] Information reconciliation for erasure channels.
-    \hfill Master's thesis.* 2017
-\item[\tag{\physics\shannon\classic}-] Information entropy of 1D quantum systems.
-    \hfill Poster and report.* 2015
-\item[\tag{}-] Surviving abroad without a smartphone.
-    \hfill Poster.* 2015
-\item[\tag{\physics}-] An analysis of the PLAST model for quasars.
-    \hfill Term paper.* 2014
-\item[\tag{\shannon}-] The Circus Game.
-    \hfill Pedagogical short story.* 2014
-\item[\tag{\physics}-] Scarlet's Letters.
-    \hfill Pedagogical short story.* 2014
-\item[\tag{\biochem}-] Exploring natural product formation with structural biology.
-    \hfill Poster and report.* 2014
-\item[\tag{\physics\classic}-] Computational simulation of electron diffraction.
-    \hfill Poster.* 2014
-\end{itemize}
-
-* Available on my personal website, \href{kmsherbert.neocities.org}{kmsherbert.neocities.org}
+\textit{Towson University} (Towson, MD) \hfill Aug 2015
 
 %-----------------------------------------------------------------------------
 %	RESEARCH EXPERIENCE SECTION
 %-----------------------------------------------------------------------------
 
-\section{RESEARCH\\EXPERIENCE}
+\section{\small{RESEARCH\\EXPERIENCE}}
 
-\textbf{Post-doctoral Researcher} \hfill Fall 2022-Present \\
-\textit{Departments of Chemistry, Physics, Virginia Tech}, Blacksburg, VA \\
-Faculty Mentors: Nick Mayhall, Sophia Economou, Ed Barnes
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{\quantum}-] Supported collaborators with an ADAPT-QAOA implementation used for training a large data model.
-\item[\tag{\physics\biochem\quantum}-] Explored alternative pool choices for sc-ADAPT-VQE in characterizing the Schwinger model.
-\item[\tag{\physics\biochem\shannon\quantum}-] Adapted the ADAPT-VQE algorithm to use Renyi divergence as a cost function.
-\item[\tag{\physics\biochem\classic\quantum}-] Assisted in the development of a dedicated Julia package representing Pauli operators.
-\item[\tag{\physics\biochem\shannon\quantum}-] Supported fellow postdoc in applying the BKSF qubit mapping to ADAPT-VQE
-\item[\tag{\physics\biochem\quantum}-] Supervised graduate student in implementing ctrl-VQE in available quantum hardware.
-\item[\tag{\physics\biochem\quantum}-] Developed novel adaptive algorithm to strategically add in parameters in ctrl-VQE.
-\item[\tag{\physics\biochem\quantum}-] Derived symmetry no-go conditions when starting ctrl-VQE from an inert pulse.
-\item[\tag{\physics\biochem\classic\quantum}-] Characterized impact of frequency and phase degrees of freedom on ctrl-VQE.
-\item[\tag{\physics\biochem\classic\quantum}-] Implemented optimized Julia code to simulate ctrl-VQE experiments.
-\item[\tag{}-] \textbf{Presented work} at \textit{APS March Meeting}, \textit{JuliaCon}, and \textit{VTQ Symposium}.
-\end{itemize}
+\textbf{Postdoctoral Researcher} \\
+\textit{Department of Chemistry and Department of Physics, Virginia Tech} (Blacksburg, VA) \\
+Mentors: Nick Mayhall, Sophia Economou, Ed Barnes \hfill 2022-Present
 
-\textbf{Doctoral Dissertation} \hfill Fall 2019-Spring 2022 \\
-\textit{Department of Physics, University of North Texas}, Denton, TX \\
-Faculty Mentor: Marco Buongiorno Nardelli
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{\physics\biochem\shannon\quantum}-] Adapted quantum algorithms for quantum chemistry to solve problems in materials science (band structures) and information theory (compressive sensing).
-\item[\tag{\physics\quantum}-] Developed novel strategy to locate excited states in variational quantum algorithms.
-\item[\tag{\shannon\quantum}-] Developed quantum circuits and protocols for compressive sensing in a quantum computer.
-\item[\tag{\physics\quantum}-] Developed three distinct quantum algorithms for band structure calculations using qiskit, cirq.
-\item[\tag{\physics\quantum}-] Validated quantum algorithm using IBMQ Experience quantum computers.
-\item[\tag{\physics\quantum}-] Derived statistical error for quantum variational excitation algorithm.
-\item[\tag{}-] \textbf{Presented work} at \textit{UNT MRS Poster Competition} and numerous academic seminars.
-\end{itemize}
+\textbf{Virtual Intern} \\
+\textit{NASA Goddard Space Flight Center} (Greenbelt, MD) \\
+Mentor: Harry Shaw \hfill 2021-2022
 
-\textbf{Virtual Intern} \hfill Summer 2021-Spring 2022 \\
-\textit{NASA Goddard Space Flight Center}, Greenbelt, MD \\
-Mentor: Harry Shaw
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{\biochem\classic}-] Simulated molecular candidates for quantum oscillator in GAMESS.
-\item[\tag{\shannon\quantum}-] Designed quantum compressive sensing protocol for LIDAR imaging with Born machines.
-\item[\tag{\shannon\classic\quantum}-] Implemented classical approximation to quantum compressive sensing protocol using tensor networks in Python.
-\item[\tag{\shannon\quantum}-] Developed quantum circuits and protocols for compressive sensing in a quantum computer.
-\item[\tag{}-] \textbf{Presented work} in \textit{VTQ Internal Seminar} and multiple NASA seminars.
-\item[\tag{}-] \textbf{Published article} in \textit{Appl. Sci.} (\textbf{12}).
-\end{itemize}
+\textbf{Research Assistant} \\
+\textit{Department of Physics, University of North Texas} (Denton, TX) \\
+Mentor: Marco Buongiorno-Nardelli \hfill 2018-2022 \\
+Mentor: Paolo Grigolini \hfill 2019, Jan-May
 
-\textbf{Research Assistant} \hfill Fall 2019-Spring 2022 \\
-\textit{Department of Physics, University of North Texas}, Denton, TX \\
-Faculty Mentor: Marco Buongiorno-Nardelli
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{\physics\quantum}-] Developed novel strategy to locate excited states with variational quantum algorithms.
-\item[\tag{\physics\quantum}-] Developed systematic quantum algorithm for band structure calculations using qiskit, cirq.
-\item[\tag{\physics\quantum}-] Validated quantum algorithm using IBMQ Experience quantum computers.
-\item[\tag{\physics\quantum}-] Calculated band structure of silicon with variational quantum eigensolver.
-\item[\tag{\physics\quantum}-] Derived statistical error for quantum variational excitation algorithm.
-\item[\tag{}-] \textbf{Presented work} at \textit{APS March Meeting 2021, 2022} and \textit{ES22} Invited Talk.
-\item[\tag{}-] \textbf{Published articles} in \textit{Scientific Reports} (\textbf{12}), \textit{RSC Adv.} (\textbf{11}) and \textit{Phys. Chem. Chem. Phys.} (\textbf{22}).
-\end{itemize}
+\textbf{Senior Software Developer} \\
+\textit{Department of Computer and Information Sciences, Towson University} (Towson, MD) \\
+Mentors: Siddharth Kaza, Blair Taylor \hfill 2017, Aug-Dec
 
-\textbf{Research Assistant} \hfill Spring 2019 \\
-\textit{Department of Physics, University of North Texas}, Denton, TX \\
-Faculty Mentor: Paolo Grigolini
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{\biochem\classic}-] Modeled and simulated non-linear Langevin dynamics of model enzyme reaction using Python.
-\item[\tag{\biochem}-] Studied temporal complexity by approximating reaction wait-time distribution using stochastic calculus.
-\item[\tag{}-] \textbf{Presented work} in student lecture for PHYS 6500.
-\end{itemize}
+\textbf{Master's Thesis} \\
+\textit{Department of Computer and Information Sciences, Towson University} (Towson, MD) \\
+Faculty Mentor: Marius Zimand \hfill 2016-2017
 
-\textbf{Research Assistant} \hfill Fall 2018 \\
-\textit{Department of Physics, University of North Texas}, Denton, TX \\
-Faculty Mentor: Marco Buongiorno-Nardelli
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{\physics\classic}-] Investigated metamolecular dynamics of small Lennard-Jones clusters using Python.
-\item[\tag{\quantum}-] Surveyed existing libraries for developing quantum algorithms.
-\item[\tag{\physics\classic}-] Verified validity of Fourier differentiation in PAOFLOW electronic structure software.
-\end{itemize}
+\textbf{Graduate Assistant} \\
+\textit{Department of Computer and Information Sciences, Towson University} (Towson, MD) \\
+Mentors: Siddharth Kaza, Blair Taylor \hfill 2015-2017
 
-\textbf{Master's Thesis} \hfill Fall 2016-Spring 2017 \\
-\textit{Department of Computer and Information Sciences, Towson University}, Towson, MD \\
-Faculty Mentor: Marius Zimand
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{\shannon}-] Reviewed literature on Slepian-Wolf coding, information erasure reconciliation.
-\item[\tag{\shannon\classic}-] Simulated information erasure reconciliation using various protocols using Python.
-\item[\tag{\shannon\classic}-] Proposed novel probabilistic protocol for reconciling erasures.
-\item[\tag{\shannon\classic}-] Measured protocol's empirical error-rate and optimal communication efficiency.
-\item[\tag{\shannon}-] Approximated theoretical error-rate and optimal communication efficiency.
-\end{itemize}
+\textbf{Research Assistant} \\
+\textit{Department of Physics, Astronomy, and Geosciences, Towson University} (Towson, MD) \\
+Mentor: Jia-An Yan \hfill 2014-2015
 
-\textbf{Graduate Assistant} \hfill Fall 2015-Spring 2017 \\
-\textit{Department of Computer and Information Sciences, Towson University}, Towson, MD \\
-Faculty Mentors: Siddharth Kaza, Blair Taylor
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{\classic}-] Created Data Hiding module for Security Injections repository.
-\item[\tag{\classic}-] Designed and supervised development of Security Injections 3.0.
-\item[\tag{\classic}-] Maintained web resources for Towson University's Cyber4All initiative.
-\item[\tag{}-] Wrote NSF Grant Report assessing progress and project outlook.
-\item[\tag{}-] \textbf{Published article} in \textit{IEEE Security and Privacy} article.
-\end{itemize}
+\textbf{Research Intern} \\
+\textit{Univeristy at Buffalo, Hauptman-Woodward Medical Research Institute} (Buffalo, NY) \\
+Mentors: Andrew Gulick, Geoffrey Lippa \hfill 2014, May-Aug
 
-\textbf{Research Assistant} \hfill Spring 2015 \\
-\textit{Dept. of Physics, Astronomy, and Geosciences, Towson University}, Towson, MD \\
-Faculty Mentor: Jia-An Yan
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{\physics\shannon\classic}-] Studied information entropy of scattering quantum systems using Matlab.
-\item[\tag{\physics\shannon}-] Analytically solved information entropy of free particle as a function of time.
-\item[\tag{\physics\shannon\classic}-] Replicated \textit{Phys. Rev. Lett.} work studying fractional revivals in bound quantum systems.
-\item[\tag{}-] \textbf{Presented work} at 2015 Towson University Research Expo.
-\end{itemize}
-
-\textbf{Research Intern} \hfill Summer 2014 \\
-\textit{Univeristy at Buffalo, Hauptman-Woodward Medical Research Institute}, Buffalo, NY \\
-Principal Investigator: Andrew Gulick \\
-Laboratory Mentor: Geoffrey Lippa
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{\biochem}-] Performed site-directed mutagensis to introduce point mutations in \textit{E. coli} plasmid.
-\item[\tag{\biochem}-] Mutated, expressed, and purified a bacterial enzyme for crystallization.
-\item[\tag{\biochem}-] Conjectured reaction pathway based on product/byproduct elution patterns.
-\item[\tag{\biochem\classic}-] Proposed deletion experiment based on predicted structure to test conjecture.
-\item[\tag{}-] \textbf{Presented work} at \textit{HWI Weekly Seminar}, \textit{CTRC Summer Research Colloquium}, and \textit{MB3 Club Seminar}.
-\end{itemize}
-
-\textbf{Capstone Project} \hfill Winter 2014 \\
-\textit{Dept. of Physics, Astronomy, and Geosciences, Towson University}, Towson, MD \\
-Faculty Mentor: Jia-An Yan
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{\physics\classic}-] Numerically solved Schr\"odinger's wave equation for a diffracting electron using Matlab.
-\item[\tag{\physics\classic}-] Calculated reflection and transmission coefficients from energy transformation.
-\item[\tag{\physics\classic}-] Compared optical Talbot effect with electron-beam analogue.
-\item[\tag{}-] \textbf{Presented work} at \textit{APS March Meeting 2014} and \textit{TU Research Expo}.
-\end{itemize}
-
-%-----------------------------------------------------------------------------
-%	TEACHING EXPERIENCE SECTION
-%-----------------------------------------------------------------------------
-
-\section{TEACHING\\EXPERIENCE}
-
-\textbf{Instructor} \hfill Summer 2024 \\
-\textit{Virginia Tech}, Blacksburg, VA
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{\physics\shannon\quantum}-] Facilitated week-long VTQ summer outreach event for high-schoolers interested in quantum information.
-\item[\tag{\physics\shannon\quantum}-] Delivered lectures, activities, and assignments for intensive and engaging day of BEE-VT summer program.
-\end{itemize}
-
-\textbf{Instructor} \hfill Summer 2023 \\
-\textit{Brookhaven National Laboratory}, Yaphank, NY
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{\physics\shannon\quantum}-] Adapted curriculum for quantum information and quantum computing using a pictoral formalism.
-\item[\tag{\physics\shannon\quantum}-] Delivered lectures, activities, and assignments for intensive and engaging one-week summer course.
-\item[\tag{}-] Mentored a graduate student in developing communication and organization skills.
-\end{itemize}
-
-\textbf{Instructor} \hfill Summers 2022-2024 \\
-\textit{Center for Talented Youth, Johns Hopkins University}
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{\physics\shannon\classic}-] Developed curriculum for intensive summer courses for many subjects: \textit{Data Structures and Algorithms}, \textit{Cryptography}, \textit{Special Relativity}.
-\item[\tag{\classic}-] Delivered lectures, activities, and assignments for intensive and engaging three-week summer course.
-\item[\tag{}-] Acted as ``flex instructor'', floating between classes of all subjects, delivering guest lessons, and supporting co-instructors in classroom management.
-\item[\tag{}-] Mentored a teaching assistant in developing communication and organization skills.
-\item[\tag{}-] Tracked student progress in content, critical thinking, and engagement, for end-of-session evaluations.
-\end{itemize}
-
-\textbf{Online Instructor} \hfill Summer 2020-Spring 2022 \\
-\textit{Center for Talented Youth, Johns Hopkins University}
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{\classic}-] Guided students through asynchronous \textit{Programming in Python for Middle-school Students} online course.
-\item[\tag{\classic}-] Tutored students all around the globe one-on-one in programming concepts and Python syntax.
-\item[\tag{\classic}-] Executed, debugged, graded, and provided feedback on programming assignments.
-\item[\tag{}-] Tracked student progress in content, critical thinking, and engagement, for end-of-course evaluations.
-\end{itemize}
-
-\textbf{Teaching Assistant} \hfill Fall 2018-Spring 2020 \\
-\textit{Department of Physics, University of North Texas}, Denton, TX
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{\physics}-] Assisted lecturer in \textit{Musical Acoustics} course with 100+ students.
-\item[\tag{}-] Laboriously graded daily quizzes and quarterly exams.
-\item[\tag{}-] Learned every student's name so they knew they were loved.
-\item[\tag{}-] Adapted course format to online learning when global pandemic struck mid-semester.
-\item[\tag{\physics}-] Facilitated labs for \textit{General Physics I}.
-\item[\tag{\physics\classic}-] Supervised students in \textit{Computational Physics} and provided guidance as needed.
-\end{itemize}
-
-\textbf{Teaching Assistant} \hfill Summers 2015-2019 \\
-\textit{Center for Talented Youth, Johns Hopkins University}
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{\physics\biochem\shannon\classic}-] Assisted instructor in intensive summer courses for middle- and high-schoolers over many subjects: \textit{Astrophysics}, \textit{Fundamentals of Computer Science}, \textit{Cryptography}, \textit{Data Structures and Algorithms}, \textit{Genomics}, \textit{Investigations in Engineering}.
-\item[\tag{\physics\biochem\shannon\classic\quantum}-] Organized ``lunchtime lessons'' for introducing students to non-curricular scientific topics of interest.
-\item[\tag{}-] Tracked student progress in content, critical thinking, and engagement, for end-of-session evaluations.
-\end{itemize}
-
-\textbf{Substitute Teacher} \hfill Spring 2018 \\
-\textit{Archdiocese of Washington} \\
-\textit{Schools:} St. Mary of the Assumption Catholic School, Cardinal Hickey Academy
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{\physics\biochem\classic}-] Taught Pre-K to 8th grade, all grades and all subjects, over four months.
-\item[\tag{}-] Awakened Kindergarten students to world geography following the story of Jonah.
-\item[\tag{\physics\biochem}-] Designed curriculum for three-day stint as SMA middle-school math and science teacher.
-\item[\tag{}-] Substituted long-term for Spanish, all grades, at CHA.
-\end{itemize}
-
-\textbf{Graduate Assistant} \hfill Fall 2018-Spring 2020 \\
-\textit{Department of Computer and Information Sciences, Towson University}, Towson, MD
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{\classic}-] Assisted lecturer in \textit{General Computer Science} and \textit{Introduction to Computer Science I} courses.
-\item[\tag{\classic}-] Supervised students in lab and provided guidance as needed.
-\item[\tag{\classic}-] Executed, debugged, graded, and provided feedback on programming assignments.
-\item[\tag{\classic}-] Tutored online high-school students enrolled in SPLASH program.
-\end{itemize}
-
-\textbf{Grader} \hfill Spring 2014 \\
-\textit{Dept. of Physics, Astronomy, and Geosciences, Towson University}, Towson, MD
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{\physics}-] Graded homeworks for \textit{Introductory Mathematical Physics}.
-\item[\tag{\physics}-] Traced students' mistakes and provided consistent feedback.
-\end{itemize}
-
-%-----------------------------------------------------------------------------
-%	ADDITIONAL EXPERIENCE SECTION
-%-----------------------------------------------------------------------------
-
-\section{ADDITIONAL\\EXPERIENCE}
-
-\textbf{Church Choir} - Accompanist \hfill 2011-Present
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{}-] Accompanied choir on clarinet, piano for weekly Catholic Mass.
-\end{itemize}
-
-\textbf{Denton Community Band, Blacksburg Community Band} - Clarinetist \hfill 2018-Present
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{}-] Played clarinet in an ensemble for seasonal concerts and Santa Serenades.
-\end{itemize}
-
-\textbf{Christian Graduate Fellowship} - President \hfill 2018-2022 \\
-\textit{University of North Texas}, Denton, TX
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{}-] Organized weekly bible study and community night.
-\end{itemize}
-
-\textbf{Senior Software Developer} \hfill Fall 2017 \\
-\textit{Department of Computer and Information Sciences, Towson University}, Towson, MD \\
-Supervisor: Siddharth Kaza
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{\classic}-] Designed database for CLARK cybersecurity curriculum management system using MongoDB, Angular.
-\item[\tag{\classic}-] Developed CLARK microservice to suggest and search for learning outcomes.
-\end{itemize}
-
-\textbf{Society of Physics Students} \hfill 2012-2016 \\
-\textit{Dept. of Physics, Astronomy, and Geosciences, Towson University}, Towson, MD
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{\physics}-] Taught physics to young (age 6-10) students in Hampden Family Center.
-\item[\tag{\physics}-] Demoed ``Shoot the Monkey'' station at 2016 \textit{Physics of Superheroes!} event.
-\item[\tag{\physics}-] Magician's assistant in 2013 \textit{Physics is Magic!} Saturday Science show.
-\end{itemize}
-
-\textbf{College Scholarship Committee} - Student Representative \hfill 2015 \\
-\textit{Jess and Mildred Fisher College of Science and Mathematics, Towson University}, Towson, MD
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{}-] Selected 2015 recipients of Jess Fisher FCSM and Pre-Engineering Scholarships.
-\end{itemize}
-
-\textbf{Honors College Leadership Council} \hfill 2012-2014 \\
-\textit{Honors College, Towson University}, Towson, MD
-\begin{itemize} \itemsep -2pt % Reduce space between items
-\item[\tag{}-] Organized college-prep event hosting AVID middle-schoolers at Honors College.
-\item[\tag{}-] Organized ``Sweets, Stars, and Structure of the Universe'' planetarium event.
-\item[\tag{}-] Redesigned Honors College Community page on Blackboard Learn.
-\end{itemize}
-
-%-----------------------------------------------------------------------------
-
+Teaching experience is listed separately.
 
 %-----------------------------------------------------------------------------
 %	AWARDS SECTION
 %-----------------------------------------------------------------------------
 
-\section{AWARDS}
+\section{\small{AWARDS}}
 
-QCE24 Best Paper in Quantum Machine Learning Track \hfill 2024 \\
-U.S. Department of Energy Grant: DE-SC0019432 (Research Assistantship) \hfill 2019-2022 \\
+QCE24 Quantum Machine Learning Track, Best Paper \hfill 2024 \\
 UNT College of Science Travel Award \hfill 2020 \\
 Maryland Space Grant Consortium Scholar \hfill 2014-2015 \\
-Edward L. Rubendall Outstanding Physics Student \hfill 2012-2014 \\
-Jess Fisher FCSM Scholar (Full Tuition) \hfill 2011-2015 \\
+Edward L. Rubendall Outstanding Physics Student (TU) \hfill 2012-2014 \\
+Jess Fisher FCSM Scholar (TU, Full Tuition) \hfill 2011-2015 \\
 Maryland Distinguished Scholar \hfill 2011-2015 \\
 Towson University Honors Scholar \hfill 2011-2015
 
+%-----------------------------------------------------------------------------
+%	PUBLICATIONS SECTION
+%-----------------------------------------------------------------------------
+
+\section{\small{PUBLICATIONS}}
+
+\textbf{Surrogate constructed scalable ciruits ADAPT-VQE using the Schwinger model.} \\
+    Erik Gustafson, \me, Adrien Florio, Karunya Shirali, Yanzhu Chen, Henry Lamm, Semeon Valgushev, Andreas Weichselbaum, Sophia E Economou, Robert D Pisarski, Norm M Tubman. \\
+    \href{https://arxiv.org/abs/2408.12641}{arXiv:2408.12641.} \hfill 2024
+
+\textbf{Adaptive quantum generative training using and unbounded loss function.} \\
+    \me, Jim Furches, Karunya Shirali, Sophia E Economou, Carlos Ortiz Marrero. \\
+    \href{https://arxiv.org/abs/2408.00218}{arXiv:2408.00218.} \hfill 2024
+    % TODO: This should be available by now! Did we fail to do something..?!
+
+\textbf{Parameterization and optimizability of pulse-level VQEs.} \\
+    \me, Hisham Amer, Sophia E Economou, Edwin Barnes, Nicholas J Mayhall. \\
+    \href{https://arxiv.org/abs/2405.15166}{arXiv:2405.15166.} \hfill 2024
+
+\textbf{Quantum compressive sensing: mathematical machinery, quantum algorithms, and quantum circuitry.} \\
+    \me, Naveed Naimipour, Haleh Safavi, Harry Shaw, Mojtaba Soltanalian. \\
+    \href{https://doi.org/10.3390/app12157525}{\textit{Applied Sciences} (\textbf{12}: 15).} \hfill 2022
+
+\textbf{Band theory and beyond: Applications of quantum algorithms for quantum chemistry.} \\
+    ~*Dissertation. \hfill 2022
+
+\textbf{Locating excited states without modifying a cost-function.} \\
+    \me, Marco Buongiorno Nardelli. \\
+    \href{https://arxiv.org/abs/2204.04361}{arXiv:2204.04361.} \hfill 2022
+
+\textbf{Quantum algorithm for electronic band structures with local tight-binding orbitals.} \\
+    \me, Anooja Jayaraj, Marco Buongiorno Nardelli. \\
+    \href{https://doi.org/10.1038/s41598-022-13627-x}{\textit{Scientific Reports (\textbf{12})}.} \hfill 2022
+
+\textbf{A systematic variational approach to band theory in a quantum computer.} \\
+    \me, Frank Cerasoli, Marco Buongiorno Nardelli. \\
+    \href{https://doi.org/10.1039/D1RA07451B}{\textit{RSC Advances} (\textbf{11}).} \hfill 2021
+
+\textbf{Quantum computation of silicon electronic band structure.} \\
+    Frank T Cerasoli, \me, Jagoda S\l{}awi\'nska, Marco Buongiorno Nardelli. \\
+    \href{https://arxiv.org/abs/2006.03807}{\textit{Physical Chemistry Chemical Physics} (\textbf{22}).} \hfill 2020
+
+\textbf{Hello, World!—Code Responsibly.} \\
+    Siddharth Kaza, Blair Taylor, \me. \\
+    \href{https://ieeexplore.ieee.org/document/8283486}{\textit{IEEE Security \& Privacy} (\textbf{16}: 1).} \hfill 2018
+
+\textbf{Information reconciliation for erasure channels.} \\
+    ~*Master's thesis. \hfill 2017
+
+* Available on my personal website, \href{kmsherbert.neocities.org}{kmsherbert.neocities.org}
 
 %-----------------------------------------------------------------------------
-%	COMPUTER SKILLS SECTION
+%	TEACHING EXPERIENCE SECTION
 %-----------------------------------------------------------------------------
 
-\section{COMPUTER\\SKILLS}
+\pagebreak
 
-{\sl Languages:} Julia, Python (Anaconda), Java, JavaScript (Angular), Perl, Matlab, C/C++/C\# \\
-{\sl Quantum:} Cirq (Google), Qiskit (IBMQ Experience), PyQuil (Rigetti Computing) \\
-{\sl Chemistry:} GAMESS, MacMolPlt \\
-{\sl Other:} Unix, LaTeX, Git, HTML5, CSS3
+\section{\small{TEACHING\\EXPERIENCE}}
+
+\Vhrulefill ~\textit{Center for Talented Youth, Johns Hopkins University} (Baltimore, MD)~ \Vhrulefill
+
+\textbf{Summer Faculty}, CTY Summer Programs \\
+\textit{Intensive three-week long course (two sessions per summer) for grades 5-10, comparable to a semester-long college course.}
+\begin{itemize}
+    \item \textbf{Flex instructor:} Responsible for floating between classes of all subjects, delivering guest lessons, supporting fellow instructors in classroom management, and substituting in during emergencies.
+    \item \textbf{Instructor:} Fully responsible for curriculum, lesson prep, content delivery, supervising a TA, and providing detailed narrative evaluations to each student.
+    \item \textbf{Teaching Assistant:} Responsible for helping the instructor with clerical and instructional tasks, and taking detailed notes to provide evidence for narrative evaluations.
+\end{itemize}
+\begin{tabular*}{\textwidth}{ll@{\extracolsep{\fill}}rr}
+    \textit{Code} & \textit{Course} & \textit{Site} & \textit{Session} \\
+    \hline
+    \multicolumn{4}{c}{\Vhrulefill ~\textit{Flex Instructor}~ \Vhrulefill} \\
+    & & Ursinus College & (1) 2024 \\
+    \multicolumn{4}{c}{\Vhrulefill ~\textit{Instructor}~ \Vhrulefill} \\
+    SREH & Special Relativity & Johns Hopkins University & (2) 2023 \\
+    CODE & Cryptology & Roger Williams University & (1) 2023 \\
+    DATA & Data Structures and Algorithms & Roger Williams University & (1,2) 2022 \\
+    \multicolumn{4}{c}{\Vhrulefill ~\textit{Teaching Assistant}~ \Vhrulefill} \\
+    ASTR & Astrophysics & Franklin and Marshall College & (1,2) 2019 \\
+    FCPS & Fundamentals of Computer Science & Seattle University & (1,2) 2018 \\
+    CODE & Cryptology & Loyola Marymount University & (1,2) 2017 \\
+    DATA & Data Structures and Algorithms & Franklin and Marshall College & (2) 2016 \\
+    ASTR & Astrophysics & Franklin and Marshall College & (1) 2016 \\
+    GNIC & Genomics & Johns Hopkins University & (2) 2015 \\
+    IENG & Investigations in Engineering & Johns Hopkins University & (1) 2015
+\end{tabular*}
+
+\textbf{Online Instructor}, Programming in Python for Middle-school Students \hfill 2020-2022 \\
+\textit{Asynchronous, self-paced introductory programming course for middle schoolers all over the world.} \\
+Responsible for giving detailed feedback to students on programming assignments for each unit, being on call to meet with students in any time zone virtually, providing detailed narrative evaluations to each student, and coordinating with other instructors to improve the curriculum.
+
+
+\Vhrulefill ~\textit{Virginia Tech} (Blacksburg, VA)~ \Vhrulefill
+
+\textbf{Tutor}, \href{https://vtq.vt.edu/outreach/Quantum-Information-Science-and-Engineering-High-School-level-Summer-School.html}{VTQ Summer School} \hfill Aug 2024 \\
+\textit{Virtual week long course for high-schoolers, with one program-wide lecture delivered at the beginning by the teacher, followed by small-group breakout rooms for the rest of the week.} \\
+Responsible for guiding students in one breakout room through a series of exercises, puzzles, and games covering foundational concepts in quantum information, algorithms and communication.
+
+\textbf{Teacher}, \href{https://eng.vt.edu/ceed/ceed-pre-college-programs/BEEVT.html}{BEE-VT} \hfill Jul 2024 \\
+\textit{One-day version of the VTQ Summer School, part of a two-week program for black high-schoolers interested in engineering.} \\
+Responsible for content delivery, structuring the day's tasks to keep students engaged, and supervising tutors.
+
+\textbf{Instructor}, \href{https://www.bnl.gov/education/programs/program.php?q=252}{WDTS-RENEW} \hfill Aug 2023 \\
+\textit{Intensive in-person version of the week-long VTQ Summer School at Brookhaven National Lab (Yaphank, NY), part of a six-week program for underprivileged college freshman interested in STEM.} \\
+Responsible for adapting curriculum from the VTQ Summer School, supplementing the curriculum with my own lessons, content delivery, and supervising a graduate student assisting as a TA.
+
+
+\Vhrulefill ~\textit{University of North Texas} (Denton, TX)~ \Vhrulefill
+
+\textbf{Learning Assistant}, PHYS 1270 \hfill 2019-2020 \\
+\textit{Science and Technology of Muscial Sound: Lecture-based physics elective for non-majors with 100+ students.} \\
+Responsible for assisting lecturer with clerical and instructional tasks, printing and grading daily quizzes and quarterly exams, supervising undergraduate assistants responsible for grading homeworks, learning every student's name so they knew they were loved, and adapting the course format to asynchronous online learning when global pandemic struck mid-semester.
+
+\textbf{Lab Assistant}, PHYS 1430 \hfill 2018-2019 \\
+\textit{General Physics Laboratory I: Lab component of algebra-based introductory physics for engineering majors.} \\
+Responsible for supervising students in lab, orienting students to the equipment each week, grading weekly pre-labs and bisemesterly lab reports, verifying students satisfactorily answered comprehension questions at the end of each lab, and fixing things when they broke.
+
+\Vhrulefill ~\textit{Archdiocese of Washington} (Washington, DC)~ \Vhrulefill
+
+\textbf{Substitute Teacher}, Pre-K through 8th grade \hfill 2018, Jan-May \\
+\textit{On call to fill in for any grade, for any subject, as needed, at Cardinal Hickey Academy (Owings, MD) and St. Mary of the Assumption (Upper Marlboro, MD).} \\
+Responsible for content delivery, classroom management, and learning the names of every student in the school so they know to take you seriously. Notable experiences include:
+\begin{itemize}
+    \item Serving two weeks as the long-term substitute Spanish teacher at CHA, remembering just enough of my own middle-school Spanish to deliver instructions in Spanish, to the astonishment of the students.
+    \item Serving three days as the middle school science and math teacher at SMA, entrusted to design my own curriculum and lesson prep.
+    \item Spending almost every Friday with Kindergarteners at SMA, and improvising a lesson awakening them to world geography by following the story of Jonah.
+\end{itemize}
+
+
+\Vhrulefill ~\textit{Towson University} (Towson, MD)~ \Vhrulefill
+
+\textbf{Teaching Assistant}, COSC 175, COSC 236 \hfill 2015-2017 \\
+\textit{General Computer Science and Introduction to Computer Science I: Introductory programming courses for non-majors and majors.} \\
+Responsible for supervising students in lab, proctoring exams, and providing detailed feedback on programming asssignments.
+
+\textbf{Teaching Assistant}, \href{https://wp.towson.edu/secured-lab/home-page/splash-about/}{SPLASH} \hfill 2016, Jan-Dec \\
+\textit{Asynchronous for-credit introductory programming course for high-school girls interested in computer science.} \\
+Responsible for being on call to meet with students virtually and providing detailed feedback on programming asssignments.
+
+\textbf{Grader}, PHYS 307 \hfill 2014, Jan-May \\
+\textit{Introductory Mathematical Physics: Survey course for physics majors covering various facets of applied mathematics.} \\
+Responsible for grading homeworks, tracing mistakes, and providing thorough feedback.
+
+
+%-----------------------------------------------------------------------------
+%	ADDITIONAL EXPERIENCE SECTION
+%-----------------------------------------------------------------------------
+
+\pagebreak
+
+\section{\small{SERVICE}}
+
+\textbf{Guest Lecturer}
+\begin{itemize}
+    \item PHYS 2254: Hello Quantum World!, \textit{Virginia Tech} (Blacksburg, VA) \\
+    Week-long lesson on quantum error correction. \hfill Nov 2023
+    \item PHYS 4254: Quantum Information Technologies, \textit{Virginia Tech} (Blacksburg, VA) \\
+    One-day lesson on measurement and eigenstates. \hfill Feb 2023
+\end{itemize}
+
+\textbf{Reviewer}
+\begin{itemize}
+    \item \textit{Journal of Supercomputing}
+\end{itemize}
+% TODO: There are at least three more that I've done through advisors but I can't find the journals.
+
+\textbf{Session Chairing}
+\begin{itemize}
+    \item \textit{IEEE Quantum Week 2024} (Montreal, Canada) \\
+    QML-QOPT1: Quantum optimization \hfill Sep 2024
+    \item \textit{APS March Meeting 2024} (Minneapolis, MN) \\
+    Y49: Quantum annealing and quantum-inspired classical algorithms \hfill Mar 2024
+    \item \textit{VTQ Symposium} (Blacksburg, VA) \\
+    Morning session \hfill Nov 2023
+\end{itemize}
+
+\textbf{Conference Organization}
+\begin{itemize}
+    \item \textit{Division of Quantum Information, APS} \\
+    Sorter for APS March Meeting 2024 \hfill Nov 2023
+\end{itemize}
+
+\textbf{Selection Committees}
+\begin{itemize}
+    \item \textit{Jess and Mildred Fisher College of Science and Mathematics, Towson University} (Towson, MD) \\
+    College scholarship committee, student representative \hfill 2015
+\end{itemize}
+
+\textbf{Musician}
+\begin{itemize}
+    \item \textit{Blacksburg Community Band} (Blacksburg, VA) \\
+    Clarinetist \hfill 2023-Present
+    \item \textit{St. Jude Roman Catholic Church} (Radford, VA) \\
+    Vocalist \hfill 2022-Present
+    \item \textit{Denton Community Band} (Denton, TX) \\
+    Clarinetist \hfill 2018-2022
+    \item \textit{St. John Paul II Catholic University Parish} (Denton, TX) \\
+    Clarinetist, Vocalist, Cantor \hfill 2018-2022
+    \item \textit{Jesus the Good Shepherd Catholic Community} (Owings, MD) \\
+    Clarinetist \hfill 2017-2018
+    \item \textit{Towson University Symphonic Band} (Towson, MD) \\
+    Clarinetist \hfill 2013-2017
+    \item \textit{Towson University Catholic Campus Ministry} (Towson, MD) \\
+    Clarinetist, Vocalist, Pianist, Cantor, Director \hfill 2011-2017
+\end{itemize}
+
+
+
+%-----------------------------------------------------------------------------
+%	PRESENTATIONS SECTION
+%-----------------------------------------------------------------------------
+
+\pagebreak
+
+\section{\small{PRESENTATIONS}}
+
+% \section{\small{INVITED\\TALKS}}
+\Vhrulefill \textbf{~Invited Talks~} \Vhrulefill
+
+\textbf{Julianic simulations of a pulse-level VQE.} \\
+    \textit{JuliaCon} (Virtual) \hfill Jun 2023
+
+\textbf{Quantum compressive sensing.} \\
+    \textit{VTQ Internal Seminar} (Blacksburg, VA) \hfill Dec 2022
+
+\textbf{Band theory on a quantum computer.} \\
+    \textit{ES22} (New York, NY) \hfill May 2022
+
+\textbf{Quantum compressive sensing.} \\
+    \textit{SCaN Breakout Intern Seminar} (Virtual) \hfill Dec 2021
+
+\textbf{Exploring natural product formation with structural biology.} \\
+    \textit{Towson MB3 Club Seminar} (Towson, MD) \hfill Feb 2015
+
+
+
+% \section{\small{CONTRIBUTED\\TALKS}}
+\Vhrulefill \textbf{~Contributed Talks~} \Vhrulefill
+
+\textbf{Adaptive quantum generative training using an unbounded loss function.} \\
+    \textit{QCE24} (Montreal, Canada) \hfill Sep 2024
+
+\textbf{An adaptive pulse-level variational quantum eigensolver.} \\
+    \textit{APS March Meeting} (Minneapolis, MN) \hfill Mar 2024
+
+\textbf{Implementing translational quantum subspace expansion with fewer qubits.} \\
+    \textit{APS March Meeting} (Chicago, IL) \hfill Mar 2022
+
+\textbf{Band structure in a quantum computer.} \\
+    \textit{APS March Meeting} (Virtual) \hfill Mar 2021
+
+% \section{\small{POSTERS}}
+\Vhrulefill \textbf{~Posters~} \Vhrulefill
+
+
+*\textbf{An adaptive pulse-level variational quantum eigensolver.} \\
+    \textit{VTQ Symposium} (Blacksburg, VA) \hfill Nov 2023
+
+*\textbf{Band theory and beyond.} \\
+    \textit{UNT MRS Poster Competition} (Denton, TX) \hfill Mar 2022
+
+*\textbf{Information entropy of 1D quantum systems.} \\
+    \textit{TU Research Expo} (Towson, MD) \hfill May 2015
+
+*\textbf{Surviving abroad without a smartphone.} \\
+    \textit{TU Honors College Expo} (Towson, MD) \hfill Mar 2015
+
+*\textbf{Exploring natural product formation with structural biology.} \\
+    \textit{CTRC Summer Research Colloquium} (Buffalo, NY) \hfill Aug 2014
+
+*\textbf{Computational simulation of electron diffraction.} \\
+    \textit{APS March Meeting} (Denver, CO) \hfill Mar 2014
+
+* Available on my personal website, \href{kmsherbert.neocities.org}{kmsherbert.neocities.org}
 
 
 \end{resume}
